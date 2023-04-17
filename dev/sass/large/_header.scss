@@ -1,0 +1,11 @@
+
+header {
+  ninja-site-width {
+    display: flex;
+    padding-block: px2rem(30);
+  }
+
+  .logo {
+    font-size: #{sass_clamp(10, 15)};
+  }
+}

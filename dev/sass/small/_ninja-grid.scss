@@ -1,0 +1,23 @@
+
+ninja-grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(3, 1fr);
+}
+* + ninja-grid { margin-block-start: var(--most-plus-ninja-grid-margin-top); }
+h2 + ninja-grid { margin-block-start: var(--h2-margin-top-plus-ninja-grid); }
+
+@media (min-width: $tablet) {
+  ninja-grid {
+    &.g8_t { grid-template-columns: repeat(8, 1fr); }
+  }
+}
+
+@media (min-width: $desktop) {
+}
+
+@media (min-width: $desktopHd) {
+  ninja-grid {
+    &.g10_dhd { grid-template-columns: repeat(8, 1fr); }
+  }
+}

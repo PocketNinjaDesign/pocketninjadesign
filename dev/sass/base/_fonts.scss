@@ -1,0 +1,44 @@
+
+// Fredokaone
+
+@font-face {
+  font-family: 'fredoka_oneregular';
+  src: url('/asset/font/fredokaone-regular-webfont.woff2') format('woff2'),
+       url('/asset/font/fredokaone-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+// Dosis
+// https://fonts.google.com/specimen/Dosis
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('/asset/font/dosis-extrabold-webfont.woff2') format('woff2'),
+       url('/asset/font/dosis-extrabold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('/asset/font/dosis-medium-webfont.woff2') format('woff2'),
+       url('/asset/font/dosis-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+// Source Sans Pro
+// https://fonts.google.com/specimen/Source+Sans+Pro?query=source+sans+pro
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/asset/font/sourcesanspro-regular-webfont.woff2') format('woff2'),
+       url('/asset/font/sourcesanspro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

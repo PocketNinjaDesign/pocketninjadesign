@@ -1,0 +1,13 @@
+
+section {
+  padding-block: var(--section-v-padding);
+}
+
+// Effectors
+
+section.bottom {
+  padding-block-start: 0;
+}
+section.top {
+  padding-block-end: 0;
+}

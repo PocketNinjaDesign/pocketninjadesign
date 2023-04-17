@@ -1,0 +1,29 @@
+{
+  "name": "Pocketninjadesign",
+  "short_name": "pocketninjadesign",
+  "background_color": "#1c1c1c",
+  "theme_color": "#d61f2d",
+  "display": "standalone",
+  "lang": "en-US",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/asset/manifest/maskable-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/asset/manifest/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/asset/manifest/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

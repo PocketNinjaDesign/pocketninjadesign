@@ -1,0 +1,32 @@
+
+// Basic
+html, body, h1, h2, h3, h4, h5, p, div,
+main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--font-color);
+  font-family: var(--base-font-family);
+}
+
+
+// Full screen view, centers everything on the page
+
+html:has(body.body-full-screen) {
+  height: var(--app-height);
+}
+body.body-full-screen {
+  height: var(--app-height);
+  overflow: hidden;
+  position: relative;
+
+  main {
+    display: grid;
+    height: inherit;
+    place-items: center;
+  }
+}

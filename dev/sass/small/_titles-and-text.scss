@@ -1,0 +1,75 @@
+
+// All title styling
+
+h1, h2, h3, h4, h5 {
+  color: var(--title-color-1);
+  font-family: var(--title-font-family);
+  font-weight: 500;
+}
+
+// titles
+h1 {
+  color: var(--h1-color);
+  font-size: var(--h1-size);
+  font-weight: 700;
+
+  & + h2 { margin-block-start: var(--h1-margin-top-plus-h2); }
+  & + p,
+  & + p.large {
+    margin-block-start: var(--h1-margin-top-plus-most);
+  }
+}
+h2 {
+  color: var(--h2-color);
+  font-size: var(--h2-size);
+
+  & + h1 { margin-block-start: var(--h2-margin-top-plus-h1); }
+  & + h3 { margin-block-start: var(--h2-margin-top-plus-most); }
+  & + p,
+  & + p.large  {
+    margin-block-start: var(--h2-margin-top-plus-most);
+  }
+}
+h3 {
+  font-size: var(--h3-size);
+
+  & + h4 { margin-block-start: var(--h3-margin-top-plus-h4); }
+  & + p,
+  & + p.large {
+    margin-block-start: var(--h3-margin-top-plus-most);
+  }
+}
+h4 {
+  font-size: var(--h4-size);
+
+  & + h5 { margin-block-start: var(--h4-margin-top-plus-h5); }
+  & + p,
+  & + p.large {
+    margin-block-start: var(--h4-margin-top-plus-most);
+  }
+}
+h5 {
+  color: var(--title-color-2);
+  font-size: var(--h5-size);
+
+  & + p,
+  & + p.large {
+    margin-block-start: var(--h5-margin-top-plus-most);
+  }
+}
+
+// paragraph
+p {
+  font-size: var(--p-size);
+  line-height: var(--p-line-height);
+
+  & + * { margin-block-start: var(--p-margin-top-plus-most); }
+  & + h2 { margin-block-start: var(--p-margin-top-plus-h2); }
+}
+p.large {
+  font-size: var(--p-large-size);
+  line-height: var(--p-large-line-height);
+
+  & + * { margin-block-start: var(--p-large-margin-top-plus-most); }
+  & + h2 { margin-block-start: var(--p-margin-top-plus-h2); }
+}

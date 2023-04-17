@@ -1,0 +1,31 @@
+{
+  "name": "pocketninjadesign",
+  "version": "1.0.0",
+  "description": "portfolio site for 2023 time to bosh something out",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "template": "node template.js",
+    "watch:serve": "serve ./src",
+    "watch:sass": "sass --source-map --style=compressed -w dev/sass:src/css",
+    "watch:trig": "watch \"npm run template -s\" dev/template",
+    "start": "npm-run-all --parallel watch:*"
+  },
+  "keywords": [
+    "twig",
+    "pocketninjadesign",
+    "sass",
+    "portfolio",
+    "static site"
+  ],
+  "author": "pocketninjadesign",
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^8.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.60.0",
+    "serve": "^14.2.0",
+    "twig": "^1.16.0",
+    "watch": "^0.13.0"
+  }
+}

@@ -1,0 +1,154 @@
+
+// CSS Vars
+
+:root {
+
+  // site widths and grid
+  --column: calc( (var(--site-width) - (var(--gap) * var(--total-gaps)) ) / var(--total-columns) );
+  --gap: #{sass_clamp(20, 50)};
+  --site-padding: #{px2rem($sitePadding)};
+  --site-width: min(#{px2rem($desktopHdPx - $sitePadding)}, calc(100vw - var(--site-padding)));
+  --site-width-thin: min(var(--site-width), var(--cols-10));
+  --total-columns: 4;
+  --total-gaps: 3;
+
+  // columns
+  --cols-2: calc( (var(--gap) * 1) + (var(--column) * 2) );
+  --cols-3: calc( (var(--gap) * 2) + (var(--column) * 3) );
+  --cols-4: calc( (var(--gap) * 3) + (var(--column) * 4) );
+  --cols-5: calc( (var(--gap) * 4) + (var(--column) * 5) );
+  --cols-6: calc( (var(--gap) * 5) + (var(--column) * 6) );
+  --cols-7: calc( (var(--gap) * 6) + (var(--column) * 7) );
+  --cols-8: calc( (var(--gap) * 7) + (var(--column) * 8) );
+  --cols-9: calc( (var(--gap) * 8) + (var(--column) * 9) );
+  --cols-10: calc( (var(--gap) * 9) + (var(--column) * 10) );
+  --cols-11: calc( (var(--gap) * 10) + (var(--column) * 11) );
+  --cols-12: calc( (var(--gap) * 11) + (var(--column) * 12) );
+
+  // base
+  --app-height: 100%;
+  --body-bg: var(--color-pn-grey-0);
+  --section-v-padding: #{sass_clamp(40, 100)};
+  --font-color: var(--color-pn-grey-4);
+  --base-font-family: 'Source Sans Pro', sans-serif;
+  --title-font-family: 'Dosis', sans-serif;
+
+
+
+
+  // ################## colours
+
+  // grey
+  --color-pn-grey-0: hsl(var(--color-pn-grey-0-hsl));
+  --color-pn-grey-0-hsl: 0, 0%, 100%; /* #fff */
+  --color-pn-grey-1: hsl(var(--color-pn-grey-1-hsl));
+  --color-pn-grey-1-hsl: 0, 0%, 96%; /* #f5f5f5 */
+  --color-pn-grey-2: hsl(var(--color-pn-grey-2-hsl));
+  --color-pn-grey-2-hsl: 0, 0%, 79%; /* #c9c9c9 */
+  --color-pn-grey-3: hsl(var(--color-pn-grey-3-hsl));
+  --color-pn-grey-3-hsl: 220, 3%, 82%; /* #cfd0d2 */
+  --color-pn-grey-4: hsl(var(--color-pn-grey-4-hsl));
+  --color-pn-grey-4-hsl: 0, 0%, 54%; /* #8a8a8a */
+  --color-pn-grey-5: hsl(var(--color-pn-grey-5-hsl));
+  --color-pn-grey-5-hsl: 120, 1%, 23%; /* #3a3b3a */
+  --color-pn-grey-6: hsl(var(--color-pn-grey-6-hsl));
+  --color-pn-grey-6-hsl: 180, 2%, 11%; /* #1b1c1c */
+  --color-pn-grey-7: hsl(var(--color-pn-grey-7-hsl));
+  --color-pn-grey-7-hsl: 255, 0%, 0%; /* #000000 */
+
+  // primary
+  --color-pn-primary-1: hsl(var(--color-pn-primary-1-hsl));
+  --color-pn-primary-1-hsl: 355, 75%, 49%; /* #D91F2D */
+  --color-pn-primary-2: hsl(var(--color-pn-primary-2-hsl));
+  --color-pn-primary-2-hsl: 358, 71%, 30%; /* #841619 */
+
+
+
+  // ################## fonts
+
+  --h1-size: #{sass_clamp(30, 60)};
+  --h1-margin-top-plus-most: #{sass_clamp(20, 40)};
+  --h1-margin-top-plus-h2: #{sass_clamp(15, 25)};
+  --h1-color: var(--color-pn-grey-5);
+
+  --h2-size: #{sass_clamp(25, 45)};
+  --h2-margin-top-plus-most: #{sass_clamp(15, 25)};
+  --h2-margin-top-plus-h1: #{sass_clamp(30, 45)};
+  --h2-margin-top-plus-ninja-grid: #{sass_clamp(30, 45)};
+  --h2-color: var(--color-pn-grey-5);
+
+  --h3-size: #{sass_clamp(20, 35)};
+  --h3-margin-top-plus-most: #{sass_clamp(13, 18)};
+  --h3-margin-top-plus-h4: #{sass_clamp(20, 25)};
+
+  --h4-size: #{sass_clamp(18, 30)};
+  --h4-margin-top-plus-most: #{sass_clamp(13, 18)};
+  --h4-margin-top-plus-h5: #{sass_clamp(18, 22)};
+
+  --h5-size: #{sass_clamp(16, 25)};
+  --h5-margin-top-plus-most: #{sass_clamp(10, 15)};
+
+  --title-color-1: var(--color-pn-primary-1);
+  --title-color-2: var(--color-pn-primary-2);
+
+  --p-size: #{sass_clamp(16, 18)};
+  --p-line-height: #{sass_clamp(22, 28)};
+  --p-margin-top-plus-most: #{sass_clamp(10, 15)};
+  --p-margin-top-plus-h2: #{sass_clamp(30, 45)};
+
+  --p-large-size: #{sass_clamp(18, 25)};
+  --p-large-line-height: #{sass_clamp(25, 32)};
+  --p-large-margin-top-plus-most: #{sass_clamp(15, 20)};
+
+
+
+  // ################## Effects
+
+  // shadows
+  --box-shadow-common: #{0 0 px2rem(12) px2rem(5) hsla(var(--color-pn-grey-4-hsl), 0.1)};
+
+
+
+  // ################## COMPONENTS
+
+  // ninja-grid
+  --most-plus-ninja-grid-margin-top: #{sass_clamp(25, 35)};
+
+
+  // logo
+  --logo-font: 'fredoka_oneregular', sans-serif;
+  --logo-base-top-fill: var(--color-pn-grey-6);
+  --logo-base-bottom-fill: var(--color-pn-grey-5);
+  --logo-blade-base-fill: var(--color-pn-grey-0);
+  --logo-blade-base-shade-fill: var(--color-pn-grey-2);
+  --logo-center-fill: var(--color-pn-grey-7);
+  --logo-center-outline-fill: var(--color-pn-primary-1);
+  --logo-center-rim-fill: var(--color-pn-primary-2);
+  --logo-pocket-color: var(--color-pn-grey-5);
+  --logo-ninja-color: var(--color-pn-primary-1);
+  --logo-design-color: var(--color-pn-grey-2);
+}
+
+
+
+@media (min-width: $mobileLarge) {
+}
+
+
+
+@media (min-width: $tablet) {
+  :root {
+    --total-columns: 12;
+    --total-gaps: 11;
+  }
+}
+
+
+
+@media (min-width: $desktop) {
+}
+
+
+
+@media (min-width: $desktopHd) {
+}

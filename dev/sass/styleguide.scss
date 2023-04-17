@@ -1,0 +1,19 @@
+
+@import "base/sass-function";
+@import "base/sass-var";
+
+
+
+// intro content
+// set to not be so wide, if consistent then
+// set this as a component class
+.intro ninja-site-width p {
+  max-width: var(--cols-8);
+}
+// ninja-site-width h2:first-of-type {
+//   background: var(--color-pn-grey-6);
+//   color: #fff;
+//   display: inline-block;
+//   padding-block: px2rem(5);
+//   padding-inline: px2rem(20);
+// }

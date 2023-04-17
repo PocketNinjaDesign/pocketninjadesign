@@ -1,0 +1,15 @@
+
+// SASS Variables
+
+$mobilePx: 375;
+$mobile: px2rem($mobilePx);
+$mobileLargePx: 550;
+$mobileLarge: px2rem($mobileLargePx);
+$tabletPx: 768;
+$tablet: px2rem($tabletPx);
+$desktopPx: 1024;
+$desktop: px2rem($desktopPx);
+$desktopHdPx: 1430;
+$desktopHd: px2rem($desktopHdPx);
+
+$sitePadding: 60;

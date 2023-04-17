@@ -1,0 +1,25 @@
+{% set prefix = '../' %}
+
+{% extends prefix ~ 'template.full.twig' %}
+
+{% set pageName = 'Home' %}
+{% set pageSlug = 'home' %}
+
+{% block meta %}
+  <meta name="title" content="Welcome To {{ company.name }}">
+  <meta name="description" content="Welcome to {{ company.name }}">
+{% endblock %}
+
+{% block pageTitle %}Welcome To{% endblock %}
+
+{% block extraHeadAssets %}
+{% endblock %}
+
+{% block extraBodyClasses %}{% endblock %}
+
+{% block extraFootAssets %}
+{% endblock %}
+
+{% block body %}
+  {% include prefix ~ "component/logo.twig" %}
+{% endblock %}
