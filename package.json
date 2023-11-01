@@ -9,7 +9,8 @@
     "watch:serve": "serve ./src",
     "watch:sass": "sass --source-map --style=compressed -w dev/sass:src/css",
     "watch:trig": "watch \"npm run template -s\" dev/template",
-    "start": "npm-run-all --parallel watch:*"
+    "start": "npm-run-all --parallel watch:*",
+    "wp": "node wp.js"
   },
   "keywords": [
     "twig",
@@ -21,6 +22,7 @@
   "author": "pocketninjadesign",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^1.4.0",
     "glob": "^8.1.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.60.0",
