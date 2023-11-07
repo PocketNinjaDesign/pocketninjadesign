@@ -1,0 +1,9 @@
+.panel {
+  position: absolute;
+  overflow-y: auto;
+  left: 1000px;
+
+  .content {
+    text-align: center;
+  }
+}

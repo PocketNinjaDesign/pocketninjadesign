@@ -1,0 +1,15 @@
+
+.arrow-icon {
+  width: 100%;
+  height: 100%;
+  fill: $swatch6;
+  transition: fill 200ms;
+
+  &.right {
+    transform: rotate(-180deg);
+  }
+
+  &:hover {
+    fill: $swatch2;
+  }
+}

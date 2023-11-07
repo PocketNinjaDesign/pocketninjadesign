@@ -1,0 +1,46 @@
+
+
+.swatch {
+  position: relative;
+  float: left;
+  margin: 0 40px 40px 0;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.07);
+
+  &:after {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    content: "";
+    display: block;
+  }
+
+  &.colour1:after {
+    background: $swatch1;
+  }
+  &.colour2:after {
+    background: $swatch2;
+  }
+  &.colour3:after {
+    background: $swatch3;
+  }
+  &.colour4:after {
+    background: $swatch4;
+  }
+  &.colour5:after {
+    background: $swatch5;
+  }
+  &.colour6:after {
+    background: $swatch6;
+  }
+  &.colour7:after {
+    background: $swatch7;
+  }
+  &.colour8:after {
+    background: $swatch8;
+  }
+}

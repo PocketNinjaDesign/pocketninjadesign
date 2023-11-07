@@ -1,0 +1,17 @@
+
+.tab {
+  .tab-navigation {
+    & > li {
+      cursor: pointer;
+
+      &.active {
+        color: $swatch5;
+      }
+    }
+  }
+  .tab-content-list {
+    .tab-content-item {
+      display: none;
+    }
+  }
+}

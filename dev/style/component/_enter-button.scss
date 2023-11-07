@@ -1,0 +1,43 @@
+.enter-button {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+
+  .box {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $swatch3;
+
+    &.one {
+      top: 0;
+      left: 0;
+    }
+    &.two {
+      top: 0;
+      right: 0;
+    }
+    &.three {
+      bottom: 0;
+      left: 0;
+    }
+    &.four {
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .enter-button-message {
+    @include size2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 0;
+    font-size: 10px;
+    padding: 0;
+  }
+}

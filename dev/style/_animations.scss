@@ -1,0 +1,18 @@
+
+@keyframes rotateLoop {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+
+@keyframes fadeIn {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+
+@import "animations/4box";
+@import "animations/full-animation-1";

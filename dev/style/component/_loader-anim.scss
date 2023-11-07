@@ -1,0 +1,23 @@
+
+.anim-wrapper {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+
+  &-absolute {
+    position: absolute;
+  }
+
+  &-fixed {
+    position: fixed;
+  }
+
+  .anim-default {
+    background: $swatch2;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+    animation: rotateLoop linear 900ms infinite;
+  }
+}

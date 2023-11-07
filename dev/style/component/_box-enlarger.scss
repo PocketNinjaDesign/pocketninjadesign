@@ -1,0 +1,28 @@
+
+.box-enlarger-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  background-color: rgba(#000, 0);
+  transition: background-color 1000ms;
+
+  &.box-overlay-active {
+    background-color: rgba(#000, 0.9);
+    right: 0;
+    bottom: 0;
+  }
+
+  .box-enlarge-item {
+    position: absolute;
+    transition: all 1000ms;
+    margin: 0;
+
+    &.active {
+      top: 0 !important;
+      left: 0 !important;
+      width: 80% !important;
+      height: auto !important;
+    }
+  }
+}

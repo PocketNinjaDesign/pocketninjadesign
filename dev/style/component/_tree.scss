@@ -1,0 +1,25 @@
+
+
+.tree-box {
+  .branch {
+    position: absolute;
+    top: 6em;
+    left: 5.9em;
+    z-index: 1;
+    width: 6.25em;
+    height: 0.625em;
+  }
+
+  & > img {
+    position: relative;
+    z-index: 2;
+    display: none;
+  }
+
+  .tree1 {
+    position: relative;
+    z-index: 2;
+    width: em(275);
+    height: em(330);
+  }
+}

@@ -1,0 +1,63 @@
+
+
+@mixin defaultFont {
+  font-family: $primaryFont;
+  font-weight: 200;
+  color: $swatch8;
+  line-height: 1.4;
+}
+
+@mixin logoFont {
+  font-family: $logoFont;
+  font-weight: 400;
+}
+
+@mixin size1 {
+  font-family: $headerFont;
+  font-size: 50px;
+  font-weight: 800;
+  color: $swatch3;
+  line-height: 1.1;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+@mixin size2 {
+  font-family: $headerFont;
+  font-size: 38px;
+  font-weight: 700;
+  color: $swatch5;
+  line-height: 1.1;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+}
+
+@mixin size3 {
+  font-family: $headerFont;
+  font-size: 34px;
+  font-weight: 500;
+  color: $swatch5;
+  line-height: 1.1;
+  padding-bottom: 14px;
+  text-transform: uppercase;
+}
+
+@mixin size4 {
+  font-family: $headerFont;
+  font-size: 24px;
+  font-weight: 500;
+  color: $swatch4;
+  line-height: 1;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+}
+
+@mixin size5 {
+  font-family: $headerFont;
+  font-size: 18px;
+  font-weight: 500;
+  color: $swatch4;
+  line-height: 1;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+}

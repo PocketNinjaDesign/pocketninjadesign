@@ -1,0 +1,17 @@
+{% extends 'master/master.template.twig' %}
+
+{% set cat = uiDesign.info %}
+{% set gallery = uiDesign.gallery.items %}
+{% set filePrefix = uiDesign.gallery.filePrefix %}
+
+{% block metaHead %}
+<meta name="description" content="User Interface design encompasses everything I do really.  The following on from many mediums of digital interfaces.">
+{% endblock %}
+
+{% block title %}Pocketninja.Design Portfolio {{ cat.title }} Gallery{% endblock %}
+{% block pageClass %}page-portfolio page-portfolio-landing{% endblock %}
+{% block sideNavBlock %}{{parent()}}{% endblock %}
+{% block body %}
+  {% include "common/portfolio-gallery.twig" with { "cat": cat, "gallery": gallery, "filePrefix": filePrefix } %}
+  {% include "common/portfolio-information.twig" with { "title": cat.title, "subTitle": cat.subTitle, "detailedDescription": cat.detailedDescription } %}
+{% endblock %}

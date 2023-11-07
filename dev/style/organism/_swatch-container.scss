@@ -1,0 +1,8 @@
+
+.swatch-container {
+}
+.swatch-container:after {
+  clear: both;
+  content: "";
+  display: block;
+}

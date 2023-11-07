@@ -1,0 +1,29 @@
+
+/// Generates an em value from pixels with an option to not show the suffix
+///
+/// @param {number} $value
+///   the number in pixels
+/// @param {integer (unitless)} $addSuffix
+///   choose whether to show the suffix em. Defaults to true
+/// @return {number} `$value` divided by `16` + the optional suffix.
+@function em($value, $fontSize: 16, $addSuffix: true) {
+  @if $addSuffix {  @return math.div($value, $fontSize) + em; }
+  @return math.div($value, $fontSize);
+}
+
+// create one for rems too.
+
+@import "vars";
+@import "functions";
+@import "animations";
+@import "mixins";
+@import "tools";
+@import "atom";
+@import "molecules";
+@import "organisms";
+@import "component";
+@import "template";
+@import "page";
+
+
+// @import "testing";

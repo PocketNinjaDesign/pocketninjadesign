@@ -1,0 +1,59 @@
+{% set commonPath = '../common/' %}
+
+<!doctype html>
+<html class="holding" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d91f2d">
+
+    {% block metaHead %}{% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="icon" href="/assets/manifest/favicon.png" type="image/png">
+    <link rel="icon" href="/assets/manifest/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/manifest/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/manifest/manifest.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,500,800|Fredoka+One:400|Source+Sans+Pro:300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
+    <script>
+      console.log(
+        "Welcome to %cPocket%cninja%cDesign.com",
+        "color:##3a3b3a;font-size:14px;font-weight:bold;",
+        "color:#d91f2d;font-size:14px;font-weight:bold;",
+        "color:#cfd0d2;font-size:14px;font-weight:bold;"
+      )
+    </script>
+  </head>
+  <body class="{% block pageClass %}{% endblock %}">
+    <div class="body-block bg-color-1"></div>
+    <div class="body-block-2"></div>
+    {% set nav = 0 %}
+
+    {% include commonPath ~ "logo.twig" with {
+      "id": "primaryLogo",
+      "uniqueClass": "primary-logo"
+    } %}
+
+    {% block sideNavBlock %}
+      {% include commonPath ~ "side-navigation.twig" with { "data": 0 } %}
+    {% endblock %}
+
+    {% block pageBespokeContent %}{% endblock %}
+
+    <div id="contentArea" class="content-area">
+      {% block body %}{% endblock %}
+    </div>
+
+    {% include commonPath ~ "tree.twig" %}
+
+    <div style="display: none;">
+      <div id="ninja" class="ninja">
+        <img src="/images/pocketninja-medium.png" alt="Pocketninja little character popping up all over the place!">
+      </div>
+    </div>
+    <script src="bundle.js?201803110922"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+.page-holding {
+  text-align: center;
+
+  .primary-logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    margin: 0 auto;
+    font-size: 45%;
+    transition: font-size 100ms;
+
+    @media (min-height: 800px) {
+      font-size: 60%;
+      top: 40px;
+    }
+  }
+
+  .enter-button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    z-index: 200;
+    transform: translate(-50%, -50%);
+
+    @media (min-height: 500px) {
+      top: 55%;
+    }
+
+    @media (min-height: 700px) {
+      top: 50%;
+    }
+  }
+
+  .under-contruction {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding-top: 7.1em;
+    transition: padding-top 100ms;
+
+    @media (min-height: 800px) {
+      padding-top: 9em;
+    }
+
+    .site-width {
+      max-width: 680px;
+
+      @media (min-height: 800px) and (min-width: 400px) {
+        font-size: 140%;
+      }
+
+      h1 {
+        font-size: 1.5625em;
+        padding-bottom: 0.3em;
+      }
+      h3 {
+        font-size: 1.125em;
+        padding-bottom: 0.625em;
+      }
+    }
+  }
+
+  .tree-box {
+    position: absolute;
+    bottom: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    font-size: 60%;
+    transition: font-size 300ms, bottom 200ms;
+    display: none;
+
+    @media (min-height: 500px) {
+      display: block;
+    }
+
+    @media (min-height: 700px) and (min-width: 450px) {
+      font-size: 80%;
+      bottom: 0;
+    }
+
+    @media (min-height: 900px) and (min-width: 450px) {
+      font-size: 100%;
+      bottom: 1em;
+    }
+  }
+}

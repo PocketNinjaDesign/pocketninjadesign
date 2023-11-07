@@ -1,0 +1,131 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  height: 100%;
+  width: 0;
+  background: $swatch4;
+  transition: width 400ms;
+  transition-timing-function: ease-out;
+
+  &.active {
+    width: 90%;
+
+    @media screen and (min-width: 440px) {
+      width: 80%;
+    }
+
+    @media screen and (min-width: 710px) {
+      width: 50%;
+    }
+
+    .nav-action {
+      background-color: $swatch5;
+
+      .band {
+        &.top {
+          transform: rotate(-30deg);
+          top: 15px;
+          left: 8px;
+        }
+        &.middle {
+          width: 0;
+        }
+        &.bottom {
+          transform: rotate(30deg);
+          top: 29px;
+          left: 8px;
+        }
+      }
+    }
+
+    .nav-wrapper {
+      .nav-options {
+        .nav {
+          color: $swatch5;
+        }
+      }
+    }
+  }
+
+  .nav-action {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(#000, 0.5);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 300ms;
+
+    &:hover {
+      background-color: rgba(#000, 1);
+    }
+
+    .band {
+      position: absolute;
+      left: 10px;
+      top: 12px;
+      width: 30px;
+      height: 5px;
+      background: #fff;
+      border-radius: 5px;
+      transform: rotate(0deg);
+      transition: transform 200ms, width 200ms, top 200ms, left 200ms;
+
+      &.top {
+      }
+      &.middle {
+        top: 22px;
+      }
+      &.bottom {
+        top: 32px;
+      }
+    }
+  }
+
+  .nav-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    .nav-options {
+      padding: 20px;
+
+      .nav {
+        width: 100%;
+        text-align: right;
+        @include size1;
+        color: $swatch4;
+        white-space: nowrap;
+        text-transform: uppercase;
+        display: block;
+        font-size: 40px;
+        line-height: 40px;
+        cursor: pointer;
+        padding-right: 0;
+
+        transition: color 200ms, padding-right 200ms;
+
+        @media screen and (min-width: 384px) {
+          font-size: 50px;
+          line-height: 50px;
+        }
+
+
+        &:hover {
+          color: #fff;
+          text-decoration: none;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+
+/*
+ * Anchors
+ *
+ * Most anchors will have these basic settings
+ * there may be an instance when the text-decoration
+ * is required within paragraphs
+ *
+ */
+a,
+.link {
+  display: inline-block;
+  color: $swatch5;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

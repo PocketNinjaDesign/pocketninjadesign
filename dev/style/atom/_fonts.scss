@@ -1,0 +1,19 @@
+
+.font-logo {
+  @include logoFont;
+}
+.font-size1 {
+  @include size1;
+}
+.font-size2 {
+  @include size2;
+}
+.font-size3 {
+  @include size3;
+}
+.font-size4 {
+  @include size4;
+}
+.font-size5 {
+  @include size5;
+}

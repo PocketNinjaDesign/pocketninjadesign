@@ -1,0 +1,21 @@
+{% extends 'master/master.template.twig' %}
+
+{% set cat = graphics.info %}
+{% set gallery = graphics.gallery.items %}
+{% set filePrefix = graphics.gallery.filePrefix %}
+
+{% block metaHead %}
+<meta name="description" content="A whole load of graphics I've done in the past.  Had some fun times and look to having more fun times ahead.">
+{% endblock %}
+
+{% block title %}Pocketninja.Design Portfolio {{ cat.title }} Gallery{% endblock %}
+{% block pageClass %}page-portfolio page-portfolio-landing{% endblock %}
+{% block sideNavBlock %}
+  {% include "common/side-navigation.twig" with { "data": 1 } %}
+{% endblock %}
+{% block body %}
+
+  {% include "common/portfolio-gallery.twig" with { "cat": cat, "gallery": gallery, "filePrefix": filePrefix } %}
+  {% include "common/portfolio-information.twig" with { "title": cat.title, "subTitle": cat.subTitle, "detailedDescription": cat.detailedDescription } %}
+
+{% endblock %}

@@ -1,0 +1,44 @@
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(#fff, 0.8);
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: opacity 300ms;
+
+  &.active {
+    opacity: 1;
+    display: block;
+  }
+
+  &.active-in-animate-mode {
+    display: block;
+  }
+
+  &.fadeOut {
+    animation: fadeOut 300ms forwards;
+  }
+
+  &.click-enabled {
+    cursor: pointer;
+  }
+}
+
+
+html.full-overlay-mode,
+html.full-overlay-mode body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .main {
+    position: fixed;
+    width: 100%;
+  }
+}

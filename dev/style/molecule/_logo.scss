@@ -1,0 +1,35 @@
+
+.logo {
+  text-align: center;
+
+  .logo-icon {
+    margin: 0 auto;
+    width: 8em;
+
+    .pn-logo {
+      .blade {
+        transform-origin: 50% 50%;
+        animation: rotateLoop linear 900ms infinite;
+      }
+    }    
+  }
+
+  p {
+    position: relative;
+    top: -0.625em;
+  }
+  span {
+    @include logoFont;
+    font-weight: 400;
+    font-size: 1.6em;
+  }
+  .logotext-pocket {
+    color: $swatch3;
+  }
+  .logotext-ninja {
+    color: $swatch5;
+  }
+  .logotext-design {
+    color: $swatch6;
+  }
+}

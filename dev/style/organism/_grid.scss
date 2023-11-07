@@ -1,0 +1,111 @@
+
+
+:root {
+  --grid-small-columns: repeat(5, 1fr);
+
+  @media (min-width: 700px) {
+    --grid-small-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 1024px) {
+    --grid-small-columns: repeat(6, 1fr);
+  }
+}
+
+.grid {
+  &.grid-small {
+
+    display: grid;
+    gap: 2px;
+    grid-template-columns: var(--grid-small-columns);
+
+    .grid-item {
+      //background: $swatch2;
+      margin-bottom: 2px;
+
+
+
+
+      // $custom-large-grid: (
+      //   columns: 12,
+      //   gutter: 2px,
+      //   media: 1024px,
+      // );
+
+      // $custom-small-grid: (
+      //   columns: 12,
+      //   gutter: 2px,
+      //   media: 700px,
+      // );
+
+      // $custom-root-grid: (
+      //   columns: 12,
+      //   gutter: 2px,
+      //   media: 0,
+      // );
+
+      // @include grid-media($custom-root-grid) {
+      //   @include grid-column(6);
+      // }
+
+      // @include grid-media($custom-small-grid) {
+      //   @include grid-column(3);
+      // }
+
+      // @include grid-media($custom-large-grid) {
+      //   @include grid-column(1);
+      // }
+    }
+  }
+
+  &.grid-medium {
+    margin: 0 -10px;
+
+    display: grid;
+    gap: 10px;
+    grid-template-columns: var(--grid-small-columns);
+
+    .grid-item {
+      margin-bottom: 10px;
+
+      // $custom-massive-grid: (
+      //   columns: 12,
+      //   gutter: 10px,
+      //   media: 1350px,
+      // );
+
+      // $custom-large-grid: (
+      //   columns: 10,
+      //   gutter: 10px,
+      //   media: 1000px,
+      // );
+
+      // $custom-small-grid: (
+      //   columns: 10,
+      //   gutter: 10px,
+      //   media: 450px,
+      // );
+
+      // $custom-root-grid: (
+      //   columns: 10,
+      //   gutter: 10px,
+      //   media: 0,
+      // );
+
+      // @include grid-media($custom-root-grid) {
+      //   @include grid-column(2);
+      // }
+
+      // @include grid-media($custom-small-grid) {
+      //   @include grid-column(2);
+      // }
+
+      // @include grid-media($custom-large-grid) {
+      //   @include grid-column(2);
+      // }
+
+      // @include grid-media($custom-massive-grid) {
+      //   @include grid-column(2);
+      // }
+    }
+  }
+}

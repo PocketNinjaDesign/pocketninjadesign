@@ -1,0 +1,31 @@
+/*
+ * Font Block
+ *
+ * Description
+ * for displaying Aa, the alphabet upper and lower and all numbers
+ *
+ */
+.font-block {
+  display: table;
+  color: $swatch6;
+  margin-bottom: 50px;
+
+  .font-large {
+    display: table-cell;
+    font-size: 100px;
+    vertical-align: middle;
+    width: 160px;
+  }
+  .font-detail {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 40px;
+
+    .font-name {
+      color: $swatch6;
+      display: block;
+      font-size: 20px;
+      padding-top: 20px;
+    }
+  }
+}

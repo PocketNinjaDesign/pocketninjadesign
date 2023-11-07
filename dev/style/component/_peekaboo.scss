@@ -1,0 +1,16 @@
+
+.peekaboo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 100;
+
+  .peekaboo-inner {
+    position: relative;
+
+    img {
+      display: block;
+    }
+  }
+}
