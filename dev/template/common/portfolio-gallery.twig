@@ -3,7 +3,7 @@
   <ul class="portfolio-list grid grid-medium">
     {% for item in gallery %}
       <li class="portfolio-list-item grid-item" data-project-title="{{item.title}}">
-        <img src="{{ filePrefix.thumb }}{{ item.img.thumb }}">
+        <img src="{{ filePrefix.thumb }}{{ item.img.thumb }}" alt="{{item.title}}" width="100%" height="100%">
       </li>
     {% endfor %}
   </ul>
