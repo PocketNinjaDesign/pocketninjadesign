@@ -1,0 +1,1 @@
+(()=>{"use strict";var o;console.log("Hello there :-) rndmFlrInt",(o=10,Math.floor(Math.random()*o)))})();

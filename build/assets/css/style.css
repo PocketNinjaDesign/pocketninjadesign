@@ -674,15 +674,10 @@ p {
   margin-bottom: 2px;
 }
 .grid.grid-medium {
-  margin: 0 -10px;
   display: grid;
   gap: 10px;
   grid-template-columns: var(--grid-small-columns);
 }
-.grid.grid-medium .grid-item {
-  margin-bottom: 10px;
-}
-
 .social-media-links {
   display: inline-block;
 }
