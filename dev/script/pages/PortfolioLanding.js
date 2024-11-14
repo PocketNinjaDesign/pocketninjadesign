@@ -15,7 +15,7 @@ class PagePortfolioLanding {
 
     this.$tree.style.display = 'block';
 
-    Portfolio.init(false, parseInt(this.$sideNavigation.dataset.portfolioSelected, 10));
+    Portfolio.init(false, this.$sideNavigation.dataset.portfolioSelected);
   }
 }
 

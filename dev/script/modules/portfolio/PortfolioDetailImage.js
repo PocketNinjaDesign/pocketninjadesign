@@ -13,6 +13,8 @@ export default {
     const prefix = options.filePrefix;
     const img = options.imageSrcData;
 
+    console.log('img', img);
+
     const element = document.createElement('div');
     element.innerHTML = `<picture class="picture-box ${options.additionalClassName}">
       <source media="(min-width: 1600px)" srcset="${prefix}${img.large}">

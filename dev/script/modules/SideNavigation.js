@@ -94,7 +94,8 @@ class SideNavigation {
         $this.parentElement.classList.add('active');
 
         if ( "index" in $this.dataset ) {
-          this.navOnClick(parseInt($this.dataset.index, 10));
+          // send back the slug name like "uidesign", "graphics"
+          this.navOnClick($this.dataset.slug);
         }
 
         if (this.state) {
@@ -104,12 +105,12 @@ class SideNavigation {
     });
   }
 
-  setSideLinkStyles(index) {
+  setSideLinkStyles(category) {
     const listItems = [... this.$sideNavigationMenu.querySelectorAll('li')];
     listItems.forEach((item, itemIndex) => {
       item.classList.remove('active');
 
-      if (itemIndex === index) {
+      if (item.querySelector('a').dataset.slug === category) {
         item.classList.add('active');
       }
     });

@@ -3,6 +3,7 @@ module.exports = [
   {
     page: 'ui-design.html',
     className: 'page-portfolio',
+    slug: 'uidesign',
     title: 'UI Design',
     subTitle: 'WEB / CD-ROM',
     shortDescription: 'UI Design Short Description',
@@ -12,6 +13,7 @@ module.exports = [
   {
     page: 'graphics.html',
     className: 'page-portfolio',
+    slug: 'graphics',
     title: 'Graphics',
     subTitle: 'Logos / Icons / Visuals',
     shortDescription: 'Graphics Short Description',
@@ -21,6 +23,7 @@ module.exports = [
   {
     page: 'illustration.html',
     className: 'page-portfolio',
+    slug: 'illustration',
     title: 'Illustration',
     subTitle: 'Digital / Paper',
     shortDescription: 'Blah blah blah in the car',

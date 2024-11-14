@@ -1,6 +1,5 @@
 const navigation = require('./navigation');
 
-
 // UI Design
 const pocketNinjaDesignWeb = require('./ui-design/pocketNinjaDesignWeb');
 const blinkboxHackathon = require('./ui-design/blinkboxHackathon');
@@ -26,6 +25,51 @@ const longLostTwinCharacters = require('./illustration/longLostTwinCharacters');
 
 module.exports = {
   navigation,
+
+  portfolio: {
+    'uidesign': {
+      filePrefix: {
+        thumb: 'images/portfolio/ui-design/thumb/',
+        detail: 'images/portfolio/ui-design/detail/',
+      },
+
+      items: [
+        // pocketNinjaDesignWeb,
+        // blinkboxHackathon,
+        // blinkboxMusicWebsite,
+        // blinkboxMusicInternational,
+        // goFishingMagazine,
+        // carMagazine,
+        // createAndCraftClub,
+      ],
+    },
+    'graphics': {
+      filePrefix: {
+        thumb: 'images/portfolio/graphics/thumb/',
+        detail: 'images/portfolio/graphics/detail/',
+      },
+
+      items: [
+        // ansaBranding,
+        // goldcrestHealthcareLogo,
+        // idealworld3dtv,
+      ],
+    },
+    'illustration': {
+      filePrefix: {
+        thumb: 'images/portfolio/illustration/thumb/',
+        detail: 'images/portfolio/illustration/detail/',
+      },
+
+      items: [
+        // blueZombieSketches,
+        // voodooBoySketch,
+        // spacemanSketch,
+        // longLostTwinCharacters,
+      ],
+    },
+  },
+
   gallery: [
 
   // UI DESIGN
@@ -36,13 +80,13 @@ module.exports = {
       },
 
       items: [
-        pocketNinjaDesignWeb,
-        blinkboxHackathon,
-        blinkboxMusicWebsite,
-        blinkboxMusicInternational,
-        goFishingMagazine,
-        carMagazine,
-        createAndCraftClub,
+        // pocketNinjaDesignWeb,
+        // blinkboxHackathon,
+        // blinkboxMusicWebsite,
+        // blinkboxMusicInternational,
+        // goFishingMagazine,
+        // carMagazine,
+        // createAndCraftClub,
       ],
     },
 
@@ -54,9 +98,9 @@ module.exports = {
         detail: 'images/portfolio/graphics/detail/',
       },
       items: [
-        ansaBranding,
-        goldcrestHealthcareLogo,
-        idealworld3dtv,
+        // ansaBranding,
+        // goldcrestHealthcareLogo,
+        // idealworld3dtv,
       ],
     },
 
@@ -68,10 +112,10 @@ module.exports = {
         detail: 'images/portfolio/illustration/detail/',
       },
       items: [
-        blueZombieSketches,
-        voodooBoySketch,
-        spacemanSketch,
-        longLostTwinCharacters,
+        // blueZombieSketches,
+        // voodooBoySketch,
+        // spacemanSketch,
+        // longLostTwinCharacters,
       ],
     },
   ],

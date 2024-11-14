@@ -58,14 +58,13 @@
   }
 
   &.grid-medium {
-    margin: 0 -10px;
-
+    // margin: 0 -10px;
     display: grid;
     gap: 10px;
     grid-template-columns: var(--grid-small-columns);
 
     .grid-item {
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
 
       // $custom-massive-grid: (
       //   columns: 12,

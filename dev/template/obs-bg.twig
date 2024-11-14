@@ -1,0 +1,48 @@
+{% set commonPath = 'common/' %}
+
+<!doctype html>
+<html class="holding" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d91f2d">
+
+    <title>OBS background page</title>
+
+    <link rel="icon" href="/assets/manifest/favicon.png" type="image/png">
+    <link rel="icon" href="/assets/manifest/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/manifest/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/manifest/manifest.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,500,800|Fredoka+One:400|Source+Sans+Pro:300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
+    <style>
+      body {
+        position: relative;
+      }
+      .logo-wrap {
+        font-size: 1.3rem;
+        position: absolute;
+        left: 5%;
+        top: 10%;
+      }
+      .logo-wrap > h2 { color: #fff; font-size: 4rem }
+      .logo-wrap > h3 { color: #aaa; font-size: 2.5rem }
+    </style>
+
+  </head>
+  <body class="page-obs">
+
+    <div class="logo-wrap">
+      {% include commonPath ~ "logo.twig" with {
+        "id": "primaryLogo",
+        "uniqueClass": "primary-logo"
+      } %}
+      <h2>Duncan Gossage</h2>
+      <h3>e: pocketninjadesign@gmail.com</h3>
+      <h3>t: 730.799.7638</h3>
+    </div>
+
+  </body>
+</html>

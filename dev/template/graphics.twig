@@ -1,8 +1,13 @@
 {% extends 'master/master.template.twig' %}
 
-{% set cat = graphics.info %}
-{% set gallery = graphics.gallery.items %}
-{% set filePrefix = graphics.gallery.filePrefix %}
+{% set cat = siteData.navigation.graphics %}
+{# {% set gallery = graphics.gallery.items %} #}
+{% set gallery = siteData.portfolio.graphics.items %}
+{# {% set filePrefix = graphics.gallery.filePrefix %} #}
+{% set filePrefix = siteData.portfolio.graphics.filePrefix %}
+
+{% set nav = 1 %}
+{% set portfolioSelected = 'graphics' %}
 
 {% block metaHead %}
   <meta name="description" content="A whole load of graphics I've done in the past.  Had some fun times and look to having more fun times ahead.">
@@ -13,10 +18,22 @@
 {% block pageClass %}page-portfolio page-portfolio-landing{% endblock %}
 
 {% block sideNavBlock %}
-  {% include "common/side-navigation.twig" with { "data": 1 } %}
+  {% include "common/side-navigation.twig" with {
+    "current": 1,
+    "navigation": siteData.navigation,
+    "portfolioSelected": portfolioSelected
+  } %}
 {% endblock %}
 
 {% block body %}
-  {% include "common/portfolio-gallery.twig" with { "cat": cat, "gallery": gallery, "filePrefix": filePrefix } %}
-  {% include "common/portfolio-information.twig" with { "title": cat.title, "subTitle": cat.subTitle, "detailedDescription": cat.detailedDescription } %}
+  {% include "common/portfolio-gallery.twig" with {
+    "cat": cat,
+    "gallery": gallery,
+    "filePrefix": filePrefix
+  } %}
+  {% include "common/portfolio-information.twig" with {
+    "title": cat.title,
+    "subTitle": cat.subTitle,
+    "detailedDescription": cat.detailedDescription
+  } %}
 {% endblock %}

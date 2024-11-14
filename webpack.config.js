@@ -1,7 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: "./dev/script/index.js",
+  entry: {
+    main: './dev/script/index.js',
+    pageTest: './dev/script/pages/experiments/pageTest.js',
+  },
+
   // 'development' or 'production'
   mode: 'production',
 
@@ -13,9 +17,9 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, "./build"),
-    filename: "bundle.js",
-    publicPath: "/build/"
+    path: path.resolve(__dirname, "./build/assets/script"),
+    filename: "[name].bundle.js",
+    // publicPath: path.resolve(__dirname, 'build/assets/script/')
   },
 
   module: {

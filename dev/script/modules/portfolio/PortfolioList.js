@@ -20,12 +20,9 @@ class PortfolioList {
       .querySelector(this.options.target)
       .querySelectorAll('.portfolio-list-item');
 
-
     // $(this.options.target)
     listItems.forEach((element, index) => {
       element.addEventListener('click', (e) => {
-        // console.log('e.currentTarget', e.currentTarget);
-
         const $this = e.currentTarget;
         const projectTitle = $this.getAttribute('data-project-title');
         const portfolioContent = root.options.galleryList.get(projectTitle);

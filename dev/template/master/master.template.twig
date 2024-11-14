@@ -16,6 +16,14 @@
     <link rel="apple-touch-icon" href="/assets/manifest/apple-touch-icon.png">
     <link rel="manifest" href="/assets/manifest/manifest.webmanifest">
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P9FS95RN');</script>
+<!-- End Google Tag Manager -->
+
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,500,800|Fredoka+One:400|Source+Sans+Pro:300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
 
@@ -25,13 +33,20 @@
         "color:##3a3b3a;font-size:14px;font-weight:bold;",
         "color:#d91f2d;font-size:14px;font-weight:bold;",
         "color:#cfd0d2;font-size:14px;font-weight:bold;"
-      )
+      );
     </script>
   </head>
   <body class="{% block pageClass %}{% endblock %}">
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FS95RN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <div class="body-block bg-color-1"></div>
     <div class="body-block-2"></div>
     {% set nav = 0 %}
+    {% set portfolioSelected = "uidesign" %}
 
     {% include commonPath ~ "logo.twig" with {
       "id": "primaryLogo",
@@ -39,7 +54,11 @@
     } %}
 
     {% block sideNavBlock %}
-      {% include commonPath ~ "side-navigation.twig" with { "data": 0 } %}
+      {% include commonPath ~ "side-navigation.twig" with {
+        "current": nav,
+        "navigation": siteData.navigation,
+        "portfolioSelected": portfolioSelected
+      } %}
     {% endblock %}
 
     {% block pageBespokeContent %}{% endblock %}
@@ -55,6 +74,15 @@
         <img src="/images/pocketninja-medium.png" alt="Pocketninja little character popping up all over the place!">
       </div>
     </div>
-    <script src="bundle.js?201803110922"></script>
+    <script>
+      var PND = {};
+      PND.data = {
+        chickens: "YES"
+      }
+      PND.siteData = {{ siteData|json_encode|raw }};
+
+      {# console.log('PND.siteData nav [0]: ', PND.siteData.navigation[0]); #}
+    </script>
+    <script src="/assets/script/main.bundle.js?201803110922"></script>
   </body>
 </html>
